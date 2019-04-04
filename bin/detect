@@ -1,0 +1,6 @@
+if [ -f $1/pdftk-bin/bin/pdftk ]; then
+  echo "found pdftk bin"
+  exit 0
+else
+  exit 1
+fi

@@ -15,3 +15,5 @@ chmod -R 777 $1/vendor/pdftk/lib/libgcj.so.16
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/vendor/pdftk/lib
 export PATH=$PATH:$HOME/vendor/pdftk/bin
+
+echo $(pdftk --version 2>&1)

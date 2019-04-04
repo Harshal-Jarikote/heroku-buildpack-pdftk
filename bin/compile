@@ -1,0 +1,17 @@
+#!/bin/bash -x
+
+### Create the required dir structure
+mkdir -vp ~/vendor/pdftk/lib ~/vendor/pdftk/bin
+
+### Move the pdftk bin & lib files
+mv ~/pdftk-bin/bin/pdftk  ~/vendor/pdftk/bin/pdftk
+mv ~/pdftk-bin/lib/libgcj.so.16 -o ~/vendor/pdftk/lib/libgcj.so.16
+
+#chown -R dyno:dyno ~/vendor/pdftk/
+
+### add permission to pdftk binary
+chmod -R 777 ~/vendor/pdftk/bin/pdftk
+chmod -R 777 ~/vendor/pdftk/lib/libgcj.so.16
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/vendor/pdftk/lib
+export PATH=$PATH:$HOME/vendor/pdftk/bin

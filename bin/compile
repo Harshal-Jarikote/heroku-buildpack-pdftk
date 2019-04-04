@@ -5,7 +5,7 @@ mkdir -vp ~/vendor/pdftk/lib ~/vendor/pdftk/bin
 
 ### Move the pdftk bin & lib files
 mv pdftk-bin/bin/pdftk  ~/vendor/pdftk/bin/pdftk
-mv pdftk-bin/lib/libgcj.so.16 -o ~/vendor/pdftk/lib/libgcj.so.16
+mv pdftk-bin/lib/libgcj.so.16 ~/vendor/pdftk/lib/libgcj.so.16
 
 #chown -R dyno:dyno ~/vendor/pdftk/
 
